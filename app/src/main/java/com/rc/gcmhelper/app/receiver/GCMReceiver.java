@@ -17,7 +17,7 @@ public final class GCMReceiver extends WakefulBroadcastReceiver {
 
     @Override
     public void onReceive(final Context context, final Intent intent) {
-        Log.d(TAG,"Got :" +intent.getExtras().getString("test"));
-        Toast.makeText(context,"Got :" +intent.getStringExtra("data"),Toast.LENGTH_LONG).show();
+        Log.d(TAG,"Got :" +intent.getStringExtra("message"));
+        Toast.makeText(context,"Got :" +intent.getStringExtra("message"),Toast.LENGTH_LONG).show();
     }
 }

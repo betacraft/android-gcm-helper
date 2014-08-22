@@ -20,6 +20,12 @@ This repo has a sample app which looks like
 
 Just check downloads for downloading the apk and using it right a-way !!
 
+NOTE:
+Message structure for server
+```
+{"data":{"message":"This is a test message"}}
+```
+
 ## How to use ?
 
 ### Getting aar of GCMHelper
