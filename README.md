@@ -40,48 +40,47 @@ compile(name: 'library', ext: 'aar')
 Once you have aar in place. Add a WakefulBroadcastReceiver 
  
 ```java
-    public final class GCMReceiver extends WakefulBroadcastReceiver {
-        private static final String TAG = "###GCMReciever###";
+public final class GCMReceiver extends WakefulBroadcastReceiver {
+    private static final String TAG = "###GCMReciever###";
 
-        @Override
-        public void onReceive(final Context context, final Intent intent) {
-        Log.d(TAG,"Got :" +intent.getExtras().getString("from"));
+    @Override
+    public void onReceive(final Context context, final Intent intent) {
+    Log.d(TAG,"Got :" +intent.getExtras().getString("from"));
 
-        }
     }
+}
 ```
 And add following to your AndroidManifest.xml
  
 ```xml
-        <receiver
-            android:name="<path_of_above_class>"
-            android:permission="com.google.android.c2dm.permission.SEND" >
-            <intent-filter>
-                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
-                <category android:name="com.rc.gcmhelper.gcm" />
-            </intent-filter>
-        </receiver>
+<receiver
+    android:name="<path_of_above_class>"
+    android:permission="com.google.android.c2dm.permission.SEND" >
+    <intent-filter>
+        <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+        <category android:name="com.rc.gcmhelper.gcm" />
+    </intent-filter>
+</receiver>
 ```
 
 Now you will have to use GCMRegistrar class to register if the device is not already registered
 
-```
- GCMRegistrar.RegisterIfNotRegistered(GCMHelperAppDemoActivity.this, senderId,
-                        new GCMRegistrar.GCMRegistrarListener() {
-                            @Override
-                            public void registrationDone(final String regId) {                               
-                            }
+```java
+GCMRegistrar.RegisterIfNotRegistered(GCMHelperAppDemoActivity.this, senderId,
+new GCMRegistrar.GCMRegistrarListener() {
+    @Override
+    public void registrationDone(final String regId) {                               
+    }
 
-                            @Override
-                            public void registering() {
-                            }
+    @Override
+    public void registering() {
+    }
 
-                            @Override
-                            public void errorWhileRegistering(Throwable exception) {                                
-                            }
-                        });
-
-            }
+    @Override
+    public void errorWhileRegistering(Throwable exception) {                                
+    }
+});
+}
 ```
 
 And you are done !!
