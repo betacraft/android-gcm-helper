@@ -63,7 +63,28 @@ And add following to your AndroidManifest.xml
         </receiver>
 ```
 
-And you are done.
+Now you will have to use GCMRegistrar class to register if the device is not already registered
+
+```
+ GCMRegistrar.RegisterIfNotRegistered(GCMHelperAppDemoActivity.this, senderId,
+                        new GCMRegistrar.GCMRegistrarListener() {
+                            @Override
+                            public void registrationDone(final String regId) {                               
+                            }
+
+                            @Override
+                            public void registering() {
+                            }
+
+                            @Override
+                            public void errorWhileRegistering(Throwable exception) {                                
+                            }
+                        });
+
+            }
+```
+
+And you are done !!
 
 ##Licence
 
