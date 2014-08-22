@@ -1,0 +1,61 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingLeft="@dimen/activity_horizontal_margin"
+                android:paddingRight="@dimen/activity_horizontal_margin"
+                android:paddingTop="@dimen/activity_vertical_margin"
+                android:paddingBottom="@dimen/activity_vertical_margin"
+                tools:context="com.rc.gcmhelper.app.GCMHelperAppDemoActivity">
+
+
+    <TextView
+        android:id="@+id/title_text_view"
+        android:text="GCMHelperDemo"
+        android:textStyle="bold"
+        android:textSize="30sp"
+        android:layout_marginBottom="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:id="@+id/reg_id_header"
+        android:layout_below="@id/title_text_view"
+        android:textStyle="bold"
+        android:text="GCM Registration ID"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:id="@+id/reg_id"
+        android:layout_below="@id/reg_id_header"
+        android:textSize="20sp"
+        android:layout_marginBottom="20dp"
+        android:text=""
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <EditText
+        android:id="@+id/sender_id_edit_text"
+        android:layout_below="@id/reg_id"
+        android:hint="Enter your sender id"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <Button
+        android:id="@+id/register"
+        android:layout_below="@id/sender_id_edit_text"
+        android:layout_marginBottom="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Register"
+        android:layout_alignParentRight="true"/>
+
+    <TextView
+        android:id="@+id/message"
+        android:layout_below="@id/register"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+
+</RelativeLayout>
