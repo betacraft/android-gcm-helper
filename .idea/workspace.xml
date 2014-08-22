@@ -60,10 +60,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="GCMHelperAppDemoActivity.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="GCMHelperAppDemoActivity.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/rc/gcmhelper/app/GCMHelperAppDemoActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.07119741" vertical-offset="704" max-vertical-offset="2376">
+            <state vertical-scroll-proportion="0.0" vertical-offset="704" max-vertical-offset="2376">
               <caret line="33" column="59" selection-start-line="33" selection-start-column="32" selection-end-line="33" selection-end-column="59" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -90,11 +90,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="README.md" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="README.md" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-16.962963" vertical-offset="312" max-vertical-offset="2596">
-              <caret line="35" column="6" selection-start-line="35" selection-start-column="6" selection-end-line="35" selection-end-column="6" />
+            <state vertical-scroll-proportion="0.29787233" vertical-offset="312" max-vertical-offset="2596">
+              <caret line="18" column="84" selection-start-line="18" selection-start-column="84" selection-end-line="18" selection-end-column="84" />
               <folding />
             </state>
           </provider>
@@ -1424,9 +1424,9 @@
         <option value="$PROJECT_DIR$/library/src/main/java/com/rc/gcmhelper/GCMRegistrar.java" />
         <option value="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/rc/gcmhelper/app/receiver/GCMReceiver.java" />
-        <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_gcmhelper_app_demo.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/test.xml" />
+        <option value="$PROJECT_DIR$/README.md" />
       </list>
     </option>
   </component>
@@ -2124,17 +2124,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-16.962963" vertical-offset="312" max-vertical-offset="2596">
-          <caret line="35" column="6" selection-start-line="35" selection-start-column="6" selection-end-line="35" selection-end-column="6" />
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="MarkdownPreviewEditor">
-        <state />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_gcmhelper_app_demo.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-8.814815" vertical-offset="1104" max-vertical-offset="1474">
@@ -2153,7 +2142,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/rc/gcmhelper/app/GCMHelperAppDemoActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.07119741" vertical-offset="704" max-vertical-offset="2376">
+        <state vertical-scroll-proportion="0.0" vertical-offset="704" max-vertical-offset="2376">
           <caret line="33" column="59" selection-start-line="33" selection-start-column="32" selection-end-line="33" selection-end-column="59" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -2165,6 +2154,17 @@
             <element signature="e#3103#3104#0" expanded="true" />
           </folding>
         </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.29787233" vertical-offset="312" max-vertical-offset="2596">
+          <caret line="18" column="84" selection-start-line="18" selection-start-column="84" selection-end-line="18" selection-end-column="84" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="MarkdownPreviewEditor">
+        <state />
       </provider>
     </entry>
   </component>
