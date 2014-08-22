@@ -18,7 +18,7 @@ This repo has a sample app which looks like
 
 ![alt tag](https://raw.github.com/RainingClouds/android-gcm-helper/master/snapshot.png)
 
-Just check downloads for downloading the apk and using it right a-way !!
+Check for the sample_app.apk in the root of the repo and download it
 
 NOTE:
 Message structure for server
