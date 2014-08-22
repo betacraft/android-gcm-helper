@@ -12,6 +12,14 @@ This library provides one method RegisterIfNot() and which returns RegId (its st
 so if your device is already registered with the server then it wont be done again. It tries to handle the exceptions
  in a way suggested by the google developer doc (https://developer.android.com/google/gcm/client.html).
 
+## If you just want to test server side
+
+This repo has a sample app which looks like
+
+![alt tag](https://raw.github.com/RainingClouds/android-gcm-helper/master/screenshot1.png)
+
+Just check downloads for downloading the apk and using it right a-way !!
+
 ## How to use ?
 
 ### Getting aar of GCMHelper

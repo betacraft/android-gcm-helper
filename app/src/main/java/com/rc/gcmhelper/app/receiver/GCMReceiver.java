@@ -1,10 +1,11 @@
 package com.rc.gcmhelper.app.receiver;
 
+import android.app.AlertDialog;
 import android.content.Context;
 import android.content.Intent;
 import android.support.v4.content.WakefulBroadcastReceiver;
 import android.util.Log;
-
+import android.widget.Toast;
 
 
 /**
@@ -16,7 +17,7 @@ public final class GCMReceiver extends WakefulBroadcastReceiver {
 
     @Override
     public void onReceive(final Context context, final Intent intent) {
-        Log.d(TAG,"Got :" +intent.getExtras().getString("from"));
-
+        Log.d(TAG,"Got :" +intent.getExtras().getString("test"));
+        Toast.makeText(context,"Got :" +intent.getStringExtra("data"),Toast.LENGTH_LONG).show();
     }
 }
