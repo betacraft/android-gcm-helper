@@ -16,7 +16,7 @@ so if your device is already registered with the server then it wont be done aga
 
 This repo has a sample app which looks like
 
-![alt tag](https://raw.github.com/RainingClouds/android-gcm-helper/master/screenshot.png)
+![alt tag](https://raw.github.com/RainingClouds/android-gcm-helper/master/snapshot.png)
 
 Just check downloads for downloading the apk and using it right a-way !!
 
