@@ -5,8 +5,8 @@ boilerplate code. And gives a callback from the GCMIntentService implemented ins
 
 ## Why
 
-GCM implementation is nothing but putting efforts for the [boilerplate code]http://en.wikipedia
-.org/wiki/Boilerplate_code. So I thought of combining everything and reduce it to just one dependency. 
+GCM implementation is nothing but putting efforts for the boilerplate code (http://en.wikipedia
+.org/wiki/Boilerplate_code). So I thought of combining everything and reduce it to just one dependency. 
 
 This library provides one method RegisterIfNot() and which returns RegId (its stored locally, 
 so if your device is already registered with the server then it wont be done again. It tries to handle the exceptions
