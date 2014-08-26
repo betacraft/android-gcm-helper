@@ -30,9 +30,16 @@ Message structure for server
 
 ### Getting aar of GCMHelper
 
+#### From Source Code
+
 1. Clone this repo
 2. Perform gradle build
 3. Get corresponding .aar file in build folder of the Library project
+
+#### From Release
+
+1. Download gcm-helper.aar from [here](https://github.com/RainingClouds/android-gcm-helper/releases).
+
 4. Create a new folder in your project (on the level of assets) aars
 5. Copy the built aar into this folder
 6. Add following as repo in your build gradle
