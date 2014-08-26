@@ -40,6 +40,7 @@ Message structure for server
 
 1. Download gcm-helper.aar from [here](https://github.com/RainingClouds/android-gcm-helper/releases).
 
+#### Then follow
 
 4. Create a new folder in your project (on the level of assets) aars
 5. Copy the built aar into this folder
