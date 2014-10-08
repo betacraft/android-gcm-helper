@@ -41,26 +41,34 @@ Message structure for server
     compile 'GCMHelper:library:1.0'
 ```
 
-~~### Getting aar of GCMHelper
+~~### Getting aar of GCMHelper~~
 
-~~1. Clone this repo
-~~2. Perform gradle build
-~~3. Get corresponding .aar file in build folder of the Library project
-~~4. Create a new folder in your project (on the level of assets) aars
-~~5. Copy the built aar into this folder
-~~6. Add following as repo in your build gradle
-~~```gradle
+~~1. Clone this repo~~
+
+~~2. Perform gradle build~~
+
+~~3. Get corresponding .aar file in build folder of the Library project~~
+
+~~4. Create a new folder in your project (on the level of assets) aars~~
+
+~~5. Copy the built aar into this folder~~
+
+~~6. Add following as repo in your build gradle~~
+
+~~```gradle~~
  repositories {
         ...
         flatDir {
             dirs 'aars'
         }
     }
-```
-~~And add following dependency
-~~```
+~~```~~
+~~And add following dependency~~
+
+~~```~~
 compile(name: 'library', ext: 'aar')
-```
+~~```~~
+
 
 ### Using inside code
 
