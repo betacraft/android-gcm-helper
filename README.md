@@ -28,15 +28,28 @@ Message structure for server
 
 ## How to use ?
 
-### Getting aar of GCMHelper
+### How to integrate
 
-1. Clone this repo
-2. Perform gradle build
-3. Get corresponding .aar file in build folder of the Library project
-4. Create a new folder in your project (on the level of assets) aars
-5. Copy the built aar into this folder
-6. Add following as repo in your build gradle
+1. Add following repository in your build.gradle
 ```gradle
+  maven {
+            url 'https://github.com/RainingClouds/android_gcm_helper_maven_repo/raw/master/'
+            }
+```
+2. Add following dependency
+```gradle
+    compile 'GCMHelper:library:1.0'
+```
+
+~~### Getting aar of GCMHelper
+
+~~1. Clone this repo
+~~2. Perform gradle build
+~~3. Get corresponding .aar file in build folder of the Library project
+~~4. Create a new folder in your project (on the level of assets) aars
+~~5. Copy the built aar into this folder
+~~6. Add following as repo in your build gradle
+~~```gradle
  repositories {
         ...
         flatDir {
@@ -44,8 +57,8 @@ Message structure for server
         }
     }
 ```
-And add following dependency
-```
+~~And add following dependency
+~~```
 compile(name: 'library', ext: 'aar')
 ```
 
