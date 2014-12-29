@@ -49,15 +49,15 @@ public final class GCMRegistrar {
         mListener = listener;
     }
 
-    public static void RegisterIfNotRegistered(final Activity activity,
+    public static void RegisterIfNotRegistered(final Context context,
                                                final String senderId,
                                                final GCMRegistrarListener listener) {
-        final String regId = StorageHelper.get(activity.getApplicationContext()).getGCMRegistrationId();
+        final String regId = StorageHelper.get(context.getApplicationContext()).getGCMRegistrationId();
         if (!regId.isEmpty()) {
             listener.registrationDone(regId);
             return;
         }
-        final GCMRegistrar gcmRegistrar = new GCMRegistrar(activity, senderId, listener);
+        final GCMRegistrar gcmRegistrar = new GCMRegistrar(context, senderId, listener);
         if (gcmRegistrar.checkPlayServices()) {
             gcmRegistrar.register();
         }
