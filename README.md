@@ -34,7 +34,7 @@ Message structure for server
 ```gradle
   maven {
             url 'https://github.com/RainingClouds/android_gcm_helper_maven_repo/raw/master/'
-            }
+  }
 ```
 2. Add following dependency
 ```gradle

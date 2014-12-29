@@ -1,6 +1,7 @@
 package com.rc.gcmhelper;
 
 import android.app.Activity;
+import android.content.Context;
 import android.os.AsyncTask;
 import android.util.Log;
 
@@ -23,58 +24,60 @@ public final class GCMRegistrar {
     private String mSenderId;
 
 
-    private Activity mActivity;
+    private Context mContext;
     private GoogleCloudMessaging mGCM;
     private String mRegId;
 
     private GCMRegistrarListener mListener;
 
 
-    public interface GCMRegistrarListener{
+    public interface GCMRegistrarListener {
         void registrationDone(final String regId);
+
         void registering();
+
         void errorWhileRegistering(final Throwable exception);
     }
 
-    private GCMRegistrar(final Activity activity, final String senderId,
-                         final GCMRegistrarListener listener){
+    private GCMRegistrar(final Context context, final String senderId,
+                         final GCMRegistrarListener listener) {
 
-        mActivity = activity;
+        mContext = context;
         mSenderId = senderId;
-        mGCM = GoogleCloudMessaging.getInstance(activity);
-        mRegId=StorageHelper.get(activity.getApplicationContext()).getGCMRegistrationId();
+        mGCM = GoogleCloudMessaging.getInstance(context);
+        mRegId = StorageHelper.get(context.getApplicationContext()).getGCMRegistrationId();
         mListener = listener;
     }
 
     public static void RegisterIfNotRegistered(final Activity activity,
                                                final String senderId,
-                                               final GCMRegistrarListener listener){
+                                               final GCMRegistrarListener listener) {
         final String regId = StorageHelper.get(activity.getApplicationContext()).getGCMRegistrationId();
-        if(!regId.isEmpty()){
+        if (!regId.isEmpty()) {
             listener.registrationDone(regId);
             return;
         }
-        final GCMRegistrar gcmRegistrar = new GCMRegistrar(activity,senderId,listener);
-        if(gcmRegistrar.checkPlayServices()){
+        final GCMRegistrar gcmRegistrar = new GCMRegistrar(activity, senderId, listener);
+        if (gcmRegistrar.checkPlayServices()) {
             gcmRegistrar.register();
         }
     }
 
-    private void register(){
+    private void register() {
         mListener.registering();
-        new AsyncTask<Object,Object,Object>(){
+        new AsyncTask<Object, Object, Object>() {
             @Override
             protected Object doInBackground(Object[] objects) {
-                Log.d(TAG,"Registering with Google Servers");
+                Log.d(TAG, "Registering with Google Servers");
                 String msg = "";
                 try {
                     if (mGCM == null) {
-                        mGCM = GoogleCloudMessaging.getInstance(mActivity.getApplicationContext());
+                        mGCM = GoogleCloudMessaging.getInstance(mContext.getApplicationContext());
                     }
                     mRegId = mGCM.register(mSenderId);
                     Log.d(TAG, "Registration is successful " + mRegId);
                     msg = "Device registered, registration ID=" + mRegId;
-                    StorageHelper.get(mActivity.getApplicationContext()).saveGCMRegistrationId(mRegId);
+                    StorageHelper.get(mContext.getApplicationContext()).saveGCMRegistrationId(mRegId);
                     mListener.registrationDone(mRegId);
                 } catch (IOException ex) {
                     msg = "Error :" + ex.getMessage();
@@ -82,14 +85,20 @@ public final class GCMRegistrar {
                 }
                 return msg;
             }
-        }.execute(null,null,null);
+        }.execute(null, null, null);
     }
 
     private boolean checkPlayServices() {
-        int resultCode = GooglePlayServicesUtil.isGooglePlayServicesAvailable(mActivity);
+        Activity activity;
+        try {
+            activity = (Activity) mContext;
+        } catch (Exception e) {
+            return true;
+        }
+        int resultCode = GooglePlayServicesUtil.isGooglePlayServicesAvailable(mContext);
         if (resultCode != ConnectionResult.SUCCESS) {
             if (GooglePlayServicesUtil.isUserRecoverableError(resultCode)) {
-                GooglePlayServicesUtil.getErrorDialog(resultCode, mActivity,
+                GooglePlayServicesUtil.getErrorDialog(resultCode, activity,
                         PLAY_SERVICES_RESOLUTION_REQUEST).show();
             } else {
                 Log.i(TAG, "This device is not supported.");
